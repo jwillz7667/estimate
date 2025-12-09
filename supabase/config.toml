@@ -1,0 +1,106 @@
+# Supabase Configuration for RenovationEstimator Pro
+# See: https://supabase.com/docs/guides/cli/config
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[api.tls]
+enabled = false
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[db.pooler]
+enabled = false
+port = 54329
+pool_mode = "transaction"
+default_pool_size = 20
+max_client_conn = 100
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1"
+
+[inbucket]
+enabled = true
+port = 54324
+site_url = "http://127.0.0.1:54323"
+smtp_port = 54325
+pop3_port = 54326
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+
+[storage.buckets.generated-images]
+public = false
+file_size_limit = "10MiB"
+allowed_mime_types = ["image/png", "image/jpeg", "image/webp"]
+
+[storage.buckets.user-avatars]
+public = true
+file_size_limit = "2MiB"
+allowed_mime_types = ["image/png", "image/jpeg"]
+
+[storage.buckets.project-attachments]
+public = false
+file_size_limit = "25MiB"
+allowed_mime_types = ["image/png", "image/jpeg", "image/webp", "application/pdf"]
+
+[auth]
+enabled = true
+site_url = "com.projectestimate://auth-callback"
+additional_redirect_urls = ["com.projectestimate://auth-callback/google", "com.projectestimate://auth-callback/apple"]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+refresh_token_reuse_interval = 10
+enable_signup = true
+enable_anonymous_sign_ins = false
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+sender_name = "RenovationEstimator Pro"
+subjects_signup_confirmation = "Confirm your signup for RenovationEstimator Pro"
+subjects_magic_link = "Your magic link for RenovationEstimator Pro"
+subjects_change_email = "Confirm your email change for RenovationEstimator Pro"
+subjects_reset_password = "Reset your RenovationEstimator Pro password"
+
+[auth.sms]
+enable_signup = false
+enable_confirmations = false
+
+[auth.external.apple]
+enabled = true
+client_id = "com.projectestimate"
+secret = "env(SUPABASE_AUTH_APPLE_SECRET)"
+redirect_uri = "https://your-project.supabase.co/auth/v1/callback"
+url = ""
+skip_nonce_check = false
+
+[auth.external.google]
+enabled = true
+client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"
+redirect_uri = "https://your-project.supabase.co/auth/v1/callback"
+url = ""
+skip_nonce_check = false
+
+[analytics]
+enabled = false
+port = 54327
+vector_port = 54328
+gcp_project_id = ""
+gcp_project_number = ""
+gcp_jwt_path = ""
+
+[experimental]
+webhooks_enabled = false
