@@ -36,7 +36,7 @@ enum Secrets {
 
     /// Google OAuth Client ID (for Google Sign-In via Supabase)
     /// Configure in Supabase Dashboard > Authentication > Providers > Google
-    static let googleClientID = "607627862554-1emeddnhsq9olm5d10hjktgl296g0a4v.apps.googleusercontent.com"
+    static let googleClientID = "607627862554-hcblnfd7bdo3h4qr460f0q30p6ucf9kq.apps.googleusercontent.com"
 
     /// URL scheme for OAuth callbacks (must match Info.plist)
     static let oauthCallbackScheme = "buildpeek"

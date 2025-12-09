@@ -21,14 +21,12 @@
 			</array>
 		</dict>
 		<!-- Google Sign-In (reversed client ID) -->
-		<!-- Replace YOUR_REVERSED_CLIENT_ID with your actual reversed client ID -->
-		<!-- Format: com.googleusercontent.apps.YOUR_CLIENT_ID -->
 		<dict>
 			<key>CFBundleURLName</key>
 			<string>Google Sign-In</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.PLACEHOLDER</string>
+				<string>com.googleusercontent.apps.607627862554-1emeddnhsq9olm5d10hjktgl296g0a4v</string>
 			</array>
 		</dict>
 	</array>
