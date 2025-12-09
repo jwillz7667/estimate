@@ -37,7 +37,7 @@ enum Secrets {
     // MARK: - OAuth Configuration
 
     /// Google OAuth Client ID (optional, for Google Sign-In)
-    static let googleClientID = "YOUR_GOOGLE_CLIENT_ID"
+    static let googleClientID = "607627862554-1emeddnhsq9olm5d10hjktgl296g0a4v.apps.googleusercontent.com"
 
     /// OAuth callback scheme
     static let oauthCallbackScheme = "buildpeek"
