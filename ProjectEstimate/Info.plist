@@ -2,9 +2,93 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- Background Modes -->
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
+	</array>
+
+	<!-- URL Schemes for OAuth Callbacks -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<!-- Supabase OAuth Callback -->
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.buildpeek.auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>buildpeek</string>
+			</array>
+		</dict>
+		<!-- Google Sign-In (reversed client ID) -->
+		<!-- Replace YOUR_REVERSED_CLIENT_ID with your actual reversed client ID -->
+		<!-- Format: com.googleusercontent.apps.YOUR_CLIENT_ID -->
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Google Sign-In</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.PLACEHOLDER</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- LSApplicationQueriesSchemes for OAuth -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechrome</string>
+		<string>comgooglemaps</string>
+	</array>
+
+	<!-- App Transport Security - Allow Supabase -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>supabase.co</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+
+	<!-- Privacy Descriptions -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>BUILD PEEK needs access to your photos to upload reference images for renovation estimates.</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>BUILD PEEK needs camera access to take photos of your renovation project.</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>BUILD PEEK uses your location to find local material suppliers and provide accurate regional pricing.</string>
+
+	<key>NSFaceIDUsageDescription</key>
+	<string>BUILD PEEK uses Face ID to securely access your saved projects and estimates.</string>
+
+	<!-- iTunes File Sharing (for PDF exports) -->
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+
+	<!-- Supported Interface Orientations -->
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

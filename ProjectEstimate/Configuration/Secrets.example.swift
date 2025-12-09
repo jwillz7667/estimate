@@ -22,17 +22,17 @@ enum Secrets {
 
     /// Your Supabase project URL
     /// Find at: Supabase Dashboard > Settings > API > Project URL
-    static let supabaseURL = "YOUR_SUPABASE_PROJECT_URL"
+    static let supabaseURL = "https://qtjzmuwooildluukcppn.supabase.co"
 
     /// Supabase anonymous/public key
     /// Find at: Supabase Dashboard > Settings > API > anon/public key
-    static let supabaseAnonKey = "YOUR_SUPABASE_ANON_KEY"
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF0anptdXdvb2lsZGx1dWtjcHBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMTgxMDcsImV4cCI6MjA4MDg5NDEwN30._wzLa0pUc4jn2t6dZeKV5g3BOapC6jwbbbhFhI_CiYk"
 
     // MARK: - Gemini AI Configuration
 
     /// Google Gemini API key
     /// Get at: https://aistudio.google.com/app/apikey
-    static let geminiAPIKey = "YOUR_GEMINI_API_KEY"
+    static let geminiAPIKey = "AIzaSyATYtUJBbfczKIWDS4WO1z6Y217orwj0pA"
 
     // MARK: - OAuth Configuration
 
