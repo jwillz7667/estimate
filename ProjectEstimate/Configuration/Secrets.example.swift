@@ -22,23 +22,21 @@ enum Secrets {
 
     /// Your Supabase project URL
     /// Find at: Supabase Dashboard > Settings > API > Project URL
-    static let supabaseURL = "https://qtjzmuwooildluukcppn.supabase.co"
+    static let supabaseURL =
 
     /// Supabase anonymous/public key
     /// Find at: Supabase Dashboard > Settings > API > anon/public key
-    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF0anptdXdvb2lsZGx1dWtjcHBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMTgxMDcsImV4cCI6MjA4MDg5NDEwN30._wzLa0pUc4jn2t6dZeKV5g3BOapC6jwbbbhFhI_CiYk"
-
+    static let supabaseAnonKey =
     // MARK: - Gemini AI Configuration
 
     /// Google Gemini API key
     /// Get at: https://aistudio.google.com/app/apikey
-    static let geminiAPIKey = "AIzaSyATYtUJBbfczKIWDS4WO1z6Y217orwj0pA"
+    static let geminiAPIKey =
 
     // MARK: - OAuth Configuration
 
     /// Google OAuth Client ID (optional, for Google Sign-In)
-    static let googleClientID = "607627862554-1emeddnhsq9olm5d10hjktgl296g0a4v.apps.googleusercontent.com"
-
+    static let googleClientID = 
     /// OAuth callback scheme
     static let oauthCallbackScheme = "buildpeek"
 

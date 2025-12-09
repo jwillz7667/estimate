@@ -21,22 +21,22 @@ enum Secrets {
     // MARK: - Supabase Configuration
 
     /// Your Supabase project URL (e.g., "https://abc123.supabase.co")
-    static let supabaseURL = "YOUR_SUPABASE_PROJECT_URL"
+    static let supabaseURL = "https://qtjzmuwooildluukcppn.supabase.co"
 
     /// Supabase anonymous/public key (safe to include in app)
-    static let supabaseAnonKey = "YOUR_SUPABASE_ANON_KEY"
+    static let supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF0anptdXdvb2lsZGx1dWtjcHBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzMTgxMDcsImV4cCI6MjA4MDg5NDEwN30._wzLa0pUc4jn2t6dZeKV5g3BOapC6jwbbbhFhI_CiYk"
 
     // MARK: - Gemini AI Configuration
 
     /// Google Gemini API key for AI estimates and image generation
     /// Get yours at: https://aistudio.google.com/app/apikey
-    static let geminiAPIKey = "YOUR_GEMINI_API_KEY"
+    static let geminiAPIKey = "AIzaSyATYtUJBbfczKIWDS4WO1z6Y217orwj0pA"
 
     // MARK: - OAuth Configuration (for Supabase Auth)
 
     /// Google OAuth Client ID (for Google Sign-In via Supabase)
     /// Configure in Supabase Dashboard > Authentication > Providers > Google
-    static let googleClientID = "YOUR_GOOGLE_CLIENT_ID"
+    static let googleClientID = "607627862554-1emeddnhsq9olm5d10hjktgl296g0a4v.apps.googleusercontent.com"
 
     /// URL scheme for OAuth callbacks (must match Info.plist)
     static let oauthCallbackScheme = "buildpeek"

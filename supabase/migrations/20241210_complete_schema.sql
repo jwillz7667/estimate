@@ -107,9 +107,9 @@ CREATE TABLE IF NOT EXISTS local_sellers (
 CREATE INDEX IF NOT EXISTS idx_local_sellers_location ON local_sellers(state, city);
 CREATE INDEX IF NOT EXISTS idx_local_sellers_zip ON local_sellers(zip_code);
 CREATE INDEX IF NOT EXISTS idx_local_sellers_category ON local_sellers(category);
-CREATE INDEX IF NOT EXISTS idx_local_sellers_geo ON local_sellers USING gist (
-    ll_to_earth(latitude, longitude)
-) WHERE latitude IS NOT NULL AND longitude IS NOT NULL;
+-- Note: Geo index requires earthdistance extension. Using simple lat/lng index instead.
+CREATE INDEX IF NOT EXISTS idx_local_sellers_lat ON local_sellers(latitude) WHERE latitude IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_local_sellers_lng ON local_sellers(longitude) WHERE longitude IS NOT NULL;
 
 -- ============================================================================
 -- PRICE QUOTES TABLE (user-specific price lookups)
